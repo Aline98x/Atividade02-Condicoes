@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class verificarlogin {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        //String -> nome
+        String usuario = "aline";
+        String password = "aline123";
+
+        //Mensagem para o usuário
+        //sc.NextLine(); -> ler a linha anterior
+        System.out.println("Digite seu usuario");
+        usuario = sc.nextLine();
+        System.out.println("Digite sua senha");
+        password = sc.nextLine();
+
+        //boolean ou boleana -> identificar falso ou verdadeiro
+        //&& -> e
+
+        boolean valido = usuario.equals("aline") && password.equals("aline123");
+
+        if (valido) {
+            System.out.println("Login efetuado com sucesso");
+        } else {
+            System.out.println("Login Inválido");
+        }
+    }
+}
