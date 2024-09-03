@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class descontoprogre {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite o valor: ");
+        double valor = sc.nextDouble();
+
+        //variaveis de desconto
+        double desconto = 0;
+        double percentual = 0;
+        double valorFinal = valor;
+
+        //aplicacao de desconto progressivo no valor da compra
+        if (valor > 500) {
+            percentual = 20;
+        } else if (valor >=200 && valor <= 500) {
+            percentual = 10;
+        } else if (valor >= 100 && valor <= 199.99) {
+            percentual = 5;
+        } else if (valor <100) {
+            percentual = 0;
+        }
+
+        desconto = (percentual / 100) * valor;
+        valorFinal = desconto + valor;
+
+        System.out.println("Valor da compra: " + valor);
+        System.out.println("Valor da desconto: " + desconto);
+        System.out.println("Valor da percentual: " + percentual);
+        System.out.println("Valor final: " + valorFinal);
+
+    }
+}
